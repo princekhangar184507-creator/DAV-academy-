@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAV Cricket Academy Talwandi | Best Cricket Coaching in Kota</title>
+<meta name="description" content="DAV Cricket Academy Talwandi — Premium cricket coaching in Kota. NIS-certified coach. U-14, U-16, U-19 training. Excellence in discipline, focus & performance.">
+<meta name="keywords" content="cricket academy kota, DAV cricket academy, best cricket coaching kota, cricket training talwandi, cricket academy rajasthan">
+<meta name="author" content="DAV Cricket Academy">
+<meta name="robots" content="index, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Clash Display via CDN fallback to Barlow Condensed -->
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+
+<style>
+/* ══════════════════════════════════════
+   DAV CRICKET ACADEMY
+   Premium Design System (Navy + Gold)
+══════════════════════════════════════ */
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F6EFE7; }
+::-webkit-scrollbar-thumb { background: #D4A574; border-radius: 4px; }
+
+/* Selection */
+::selection { background: #0D1B2A; color: #fff; }
+
+:root {
+  --base:    #F6EFE7;
+  --base-d:  #EFE5D7;
+  --primary: #0D1B2A;
+  --navy:    #0D1B2A;
+  --gold:    #D4A574;
+  --gold-d:  #B8860B;
+  --muted:   #555555;
+  --muted2:  #888888;
+  --border:  rgba(13,27,42,0.10);
+  --font-d:  'Clash Display', 'Barlow Condensed', sans-serif;
+  --font-b:  'Satoshi', 'DM Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body{
+  font-family: var(--font-b);
+  color: var(--primary);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+
+  background:
+  radial-gradient(circle at 10% 15%, rgba(255,186,140,.18), transparent 30%),
+  radial-gradient(circle at 90% 8%, rgba(255,214,175,.18), transparent 28%),
+  radial-gradient(circle at 85% 85%, rgba(255,215,225,.16), transparent 32%),
+  radial-gradient(circle at 20% 90%, rgba(255,230,205,.14), transparent 30%),
+  linear-gradient(
+      180deg,
+      #F7EFE7 0%,
+      #F9F3ED 45%,
+      #FFF8F4 100%
+  );
+
+  background-attachment:fixed;
+}
+
+/* ── GRADIENT BLOBS ── */
+.blob-wrap {
+  position: fixed; inset: 0; z-index: 0;
+  pointer-events: none; overflow: hidden;
+}
+.blob{
+position:absolute;
+border-radius:50%;
+filter:blur(180px);
+mix-blend-mode:screen;
+pointer-events:none;
+}
+
+.blob-1{
+width:520px;
+height:520px;
+background:#FFD2B0;
+top:-120px;
+left:-120px;
+opacity:.28;
+}
+
+.blob-2{
+width:480px;
+height:480px;
+background:#FFE2C5;
+right:-120px;
+top:120px;
+opacity:.22;
+}
+
+.blob-3{
+width:560px;
+height:560px;
+background:#FFDDE5;
+bottom:-180px;
+left:30%;
+opacity:.18;
+}
+
+/* ── SLIDE-UP ENTRANCE ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1),
+              transform 0.8s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ══════════════════════════════════════
+   HEADER
+══════════════════════════════════════ */
+header{
+  position: sticky; top: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 24px;
+
+  background:rgba(255,255,255,.25);
+
+  backdrop-filter:blur(30px);
+
+  -webkit-backdrop-filter:blur(30px);
+
+  border:1px solid rgba(255,255,255,.4);
+
+  box-shadow:
+  0 8px 30px rgba(255,185,150,.12);
+
+  border-radius:22px;
+
+  margin:18px;
+
+}
+
+.hd-brand { display: flex; align-items: center; gap: 10px; min-width: 0; flex: 1; overflow: hidden; }
+
+.logo-box {
+  width: 46px; height: 46px; flex-shrink: 0;
+  transition: transform 0.3s;
+}
+.logo-box:hover { transform: scale(1.08); }
+.logo-box img { width: 100%; height: 100%; object-fit: contain; display: block; filter: drop-shadow(0 2px 6px rgba(13,27,42,0.18)); }
+
+.hd-name {
+  font-family: var(--font-d);
+  font-size: clamp(0.72rem, 3vw, 1rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  line-height: 1.1;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  max-width: clamp(120px, 40vw, 300px);
+}
+.hd-loc {
+  font-size: 0.6rem;
+  color: var(--muted2);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ── NAV LINKS ── */
+nav {
+  display: flex; gap: 32px; align-items: center; margin-left: auto;
+}
+nav a {
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+nav a:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* ══════════════════════════════════════
+   HERO SECTION
+══════════════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 24px 60px;
+  gap: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-logo-block {
+  margin-bottom: 40px;
+  animation: float 3s ease-in-out infinite;
+  position: relative;
+}
+.hero-logo-block::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 70%; height: 70%;
+  transform: translate(-50%,-50%);
+  background: radial-gradient(circle, rgba(212,165,116,0.35) 0%, rgba(212,165,116,0) 70%);
+  filter: blur(20px);
+  z-index: -1;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+.hero-logo-block img {
+  width: clamp(160px, 26vw, 260px);
+  height: auto;
+  filter: drop-shadow(0 20px 60px rgba(13,27,42,0.2));
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.hero h1 {
+  font-family: var(--font-d);
+  font-size: clamp(48px, 8vw, 80px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  max-width: 900px;
+}
+
+.hero-tagline {
+  font-size: 20px;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 600px;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn-raw {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 40px;
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-b);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+  position: relative;
+  overflow: hidden;
+
+  background:linear-gradient(135deg,#FF9A62,#FF7B5C);
+
+  border:none;
+
+  border-radius:18px;
+
+  box-shadow:
+  0 15px 35px rgba(255,140,90,.35);
+
+}
+
+.btn-raw::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: var(--gold);
+  z-index: -1;
+  transition: left 0.3s cubic-bezier(0.16,1,0.3,1);
+}
+
+.btn-raw:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(255,140,90,0.45);
+}
+.btn-raw:hover::before { left: 0; }
+
+.btn-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 40px;
+  background: transparent;
+  color: var(--navy);
+  text-decoration: none;
+  border: 2px solid var(--navy);
+  border-radius: 18px;
+  font-family: var(--font-b);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+}
+
+.btn-text:hover {
+  background: var(--navy);
+  color: white;
+  transform: translateY(-4px);
+}
+
+/* ── SEPARATOR ── */
+.sep {
+  height: 1px;
+  background: transparent;
+  margin: 0 24px;
+}
+
+/* ══════════════════════════════════════
+   SECTION LAYOUT
+══════════════════════════════════════ */
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.eyebrow {
+  font-size: 0.65rem;
+  color: var(--gold);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.sec-title {
+  font-family: var(--font-d);
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 60px;
+  letter-spacing: -0.01em;
+}
+
+.t-gold { color: var(--gold); }
+
+/* ══════════════════════════════════════
+   CARDS GRID
+══════════════════════════════════════ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.card{
+  padding: 24px 18px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  background:rgba(255,255,255,.28);
+
+  backdrop-filter:blur(28px);
+  -webkit-backdrop-filter:blur(28px);
+
+  border:1px solid rgba(255,255,255,.45);
+
+  border-radius:28px;
+
+  box-shadow:
+  0 12px 35px rgba(195,150,115,.10),
+  0 30px 80px rgba(255,185,150,.18),
+  inset 0 1px 0 rgba(255,255,255,.6);
+
+  transition:.45s;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg, var(--navy) 0%, var(--gold) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1);
+}
+
+.card:hover{
+
+  transform:translateY(-10px);
+
+  background:rgba(255,255,255,.40);
+
+  box-shadow:
+  0 30px 80px rgba(255,180,135,.24),
+  0 10px 30px rgba(0,0,0,.05);
+
+  border-color:rgba(255,255,255,.7);
+
+}
+
+.card:hover::before { transform: scaleX(1); }
+
+.card-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.card h3 {
+  font-family: var(--font-d);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* ══════════════════════════════════════
+   STATS SECTION
+══════════════════════════════════════ */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-num {
+  font-family: var(--font-d);
+  font-size: clamp(42px, 8vw, 64px);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-lbl {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ══════════════════════════════════════
+   COACH SECTION
+══════════════════════════════════════ */
+.coach-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.coach-img {
+  border-radius: 24px;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  background: linear-gradient(135deg, var(--base-d) 0%, #E8E0D8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(13,27,42,0.1);
+}
+.coach-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.coach-content h2 {
+  font-family: var(--font-d);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.coach-role {
+  font-size: 16px;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.coach-content p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.coach-highlight {
+  background: rgba(212,165,116,0.08);
+  border-left: 4px solid var(--gold);
+  padding: 20px;
+  margin-top: 32px;
+  border-radius: 14px;
+}
+
+.coach-highlight strong {
+  color: var(--navy);
+}
+
+/* ══════════════════════════════════════
+   GALLERY
+══════════════════════════════════════ */
+.gal-outer {
+  border-radius: 24px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 10px 40px rgba(13,27,42,0.08);
+}
+
+.gal-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 16px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gal-track::-webkit-scrollbar {
+  height: 8px;
+}
+.gal-track::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 4px;
+}
+
+.gi {
+  flex: 0 0 calc(33.333% - 10px);
+  aspect-ratio: 1.4/1;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: linear-gradient(135deg, var(--base-d) 0%, #E8E0D8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.gi:hover {
+  transform: scale(1.05);
+}
+
+.gi img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .gi { flex: 0 0 calc(50% - 8px); }
+}
+@media (max-width: 480px) {
+  .gi { flex: 0 0 calc(100% - 16px); }
+}
+
+/* ══════════════════════════════════════
+   TESTIMONIALS
+══════════════════════════════════════ */
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.tc {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 22px;
+  transition: all 0.3s;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(13,27,42,0.05);
+}
+
+.tc::before {
+  content: '"';
+  position: absolute;
+  top: 8px; right: 20px;
+  font-family: var(--font-d);
+  font-size: 64px;
+  color: var(--gold);
+  opacity: 0.25;
+  line-height: 1;
+}
+
+.tc:hover {
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 15px 40px rgba(13,27,42,0.08);
+  transform: translateY(-4px);
+}
+
+.tc-stars {
+  font-size: 14px;
+  color: var(--gold);
+  margin-bottom: 16px;
+  letter-spacing: 0.1em;
+}
+
+.tc-text {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.tc-author {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.tc-av {
+  font-family: var(--font-d);
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, var(--navy) 0%, #1a2f4a 100%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tc-name {
+  display: block;
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.tc-role {
+  display: block;
+  font-size: 12px;
+  color: var(--muted2);
+  margin-top: 4px;
+}
+
+/* ══════════════════════════════════════
+   CTA BAND
+══════════════════════════════════════ */
+.cta-band {
+  margin: clamp(48px,12vw,96px) 0;
+  background: linear-gradient(135deg, var(--navy) 0%, #1a2f4a 100%);
+  padding: clamp(48px, 10vw, 80px) 24px;
+  border-radius: 28px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.cta-band::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 40vw; height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(212,165,116,0.03) 10px,
+    rgba(212,165,116,0.03) 20px
+  );
+  pointer-events: none;
+}
+
+.cta-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-scarcity {
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.cta-title {
+  font-family: var(--font-d);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 700;
+  color: white;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.cta-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.4;
+  margin: 20px 0;
+}
+
+.cta-right {
+  text-align: left;
+}
+
+.cta-phone {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.cta-phone span {
+  color: var(--gold);
+}
+
+.cta-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.cta-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* ══════════════════════════════════════
+   CONTACT
+══════════════════════════════════════ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.cc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cc {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.cc-icon-box {
+  font-size: 28px;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212,165,116,0.1);
+  border-radius: 14px;
+}
+
+.cc-lbl {
+  display: block;
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.cc-val {
+  display: block;
+  font-size: 15px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.map-wrap {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(13,27,42,0.1);
+  height: 400px;
+  position: relative;
+}
+
+.map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.map-btn {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  padding: 12px 24px;
+  background: white;
+  color: var(--navy);
+  text-decoration: none;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.map-btn:hover {
+  background: var(--gold);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer {
+  background: var(--navy);
+  color: white;
+  padding: 60px 24px 24px;
+  margin-top: clamp(60px, 10vw, 100px);
+  position: relative;
+  z-index: 10;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-brand {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.footer-name {
+  font-family: var(--font-d);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+footer p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.6;
+}
+
+.footer-year {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.3);
+  padding-top: 24px;
+}
+
+/* ══════════════════════════════════════
+   FLOATING BUTTONS
+══════════════════════════════════════ */
+.float-cluster {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 999;
+}
+
+.fb {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(13,27,42,0.2);
+}
+
+.fb:hover {
+  transform: translateY(-8px);
+  background: var(--gold);
+  border-color: var(--navy);
+}
+
+.fb svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  fill: none;
+}
+
+/* ══════════════════════════════════════
+   LIGHTBOX
+══════════════════════════════════════ */
+#lb {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(13,27,42,0.95);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+}
+
+#lb.open {
+  display: flex;
+}
+
+#lb-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 16px;
+  object-fit: contain;
+  animation: pop 0.3s cubic-bezier(0.16,1,0.3,1);
+}
+
+@keyframes pop {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+#lb-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+}
+
+#lb-close:hover {
+  background: var(--gold);
+  color: white;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 768px) {
+  header {
+    padding: 12px 16px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    padding: 100px 20px 40px;
+  }
+
+  .hero h1 {
+    margin-bottom: 16px;
+  }
+
+  .coach-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+<div class="blob-wrap">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- ═══ HEADER ═══ -->
+<header>
+  <div class="hd-brand">
+    <div class="logo-box">
+      <img src="logo.png" alt="DAV Cricket Academy">
+    </div>
+    <div>
+      <div class="hd-name">DAV ACADEMY</div>
+      <div class="hd-loc">TALWANDI, KOTA</div>
+    </div>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#coach">Coach</a>
+    <a href="#programs">Programs</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-logo-block">
+    <img src="logo.png" alt="DAV Cricket Academy Logo">
+  </div>
+  <div class="hero-tagline">Excellence • Discipline • Focus</div>
+  <h1>DAV Cricket Academy</h1>
+  <p>Premium cricket coaching in Talwandi under NIS-certified guidance. Developing champions since 2023.</p>
+  <div class="hero-cta">
+    <a href="https://wa.me/919672696091?text=Hi%20I%20want%20to%20join%20DAV%20Cricket%20Academy" class="btn-raw"><span>🚀 Join Us Today</span></a>
+    <a href="#contact" class="btn-text">Learn More →</a>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<div class="sep" style="margin:clamp(60px,12vw,120px) 0;"></div>
+<div class="wrap">
+  <div class="eyebrow">About Academy</div>
+  <div class="sec-title">BUILD <span class="t-gold">CHAMPIONS</span></div>
+  
+  <div class="stat-grid reveal">
+    <div class="stat-box">
+      <div class="stat-num">120+</div>
+      <div class="stat-lbl">Students</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">3</div>
+      <div class="stat-lbl">Age Groups (U14, U16, U19)</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">2024</div>
+      <div class="stat-lbl">Shraddha Datta Tournament</div>
+    </div>
+  </div>
+
+  <div class="sep" style="margin: 60px 0;"></div>
+
+  <div class="card-grid">
+    <div class="card reveal">
+      <span class="card-icon">🏛️</span>
+      <h3>DAV Heritage</h3>
+      <p>Part of the world's largest educational network with unmatched global presence and credibility.</p>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">👥</span>
+      <h3>Diverse Training</h3>
+      <p>All age groups U-14, U-16, U-19. Personalized coaching pathways for every skill level.</p>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">⏰</span>
+      <h3>Flexible Batches</h3>
+      <p>Evening sessions 4:30 PM – 6:30 PM. Designed around school schedules.</p>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">🎯</span>
+      <h3>Expert Coaching</h3>
+      <p>NIS-certified coach with national-level playing experience and proven track record.</p>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">🏆</span>
+      <h3>Tournament Ready</h3>
+      <p>Competitive training. Our students excel in district and state tournaments.</p>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">🌟</span>
+      <h3>Character First</h3>
+      <p>Excellence in sport, discipline in training, integrity in life.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ COACH ═══ -->
+<div class="sep" style="margin:clamp(60px,12vw,120px) 0;"></div>
+<div class="wrap">
+  <div class="eyebrow" id="coach">Coach</div>
+  <div class="sec-title">LEARN FROM <span class="t-gold">THE BEST</span></div>
+
+  <div class="coach-hero reveal">
+    <div class="coach-img"><img src="Ac.jpg" alt="Coach Mahaveer Singh" loading="lazy"></div>
+    <div class="coach-content">
+      <h2>Mahaveer Singh</h2>
+      <div class="coach-role">NIS-Certified Cricket Coach</div>
+      <p>A national-level cricketer with extensive expertise in developing young talent. Mahaveer Singh brings decades of competitive experience and a proven methodology to unlock potential in every student.</p>
+      <p>Specializes in batting techniques, game awareness, and mental toughness. Known for personalized attention and creating a disciplined yet encouraging training environment.</p>
+      <div class="coach-highlight">
+        <strong>Philosophy:</strong> "Cricket is 90% mental. We build champions through discipline, focus, and consistent execution."
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PROGRAMS ═══ -->
+<div class="sep" style="margin:clamp(60px,12vw,120px) 0;"></div>
+<div class="wrap">
+  <div class="eyebrow" id="programs">Programs</div>
+  <div class="sec-title">AGE-BASED <span class="t-gold">TRAINING</span></div>
+
+  <div class="card-grid">
+    <div class="card reveal">
+      <span class="card-icon">🎯</span>
+      <h3>U-14 Program</h3>
+      <p>Fundamental skills, basic strategy, fitness foundation. Introduction to competitive cricket dynamics.</p>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">⚡</span>
+      <h3>U-16 Program</h3>
+      <p>Intermediate technique, tactical awareness, tournament preparation. Building competitive mindset.</p>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">🏆</span>
+      <h3>U-19 Program</h3>
+      <p>Advanced skills, serious competition, pathway to higher levels. Professional-grade coaching.</p>
+    </div>
+  </div>
+
+  <div class="sep" style="margin: 60px 0;"></div>
+
+  <div class="card-grid">
+    <div class="card reveal">
+      <span class="card-icon">📅</span>
+      <h3>Training Schedule</h3>
+      <p><strong>Days:</strong> Monday – Sunday (Wednesday Off)<br><strong>Time:</strong> 4:30 PM – 6:30 PM</p>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">🏟️</span>
+      <h3>Facility</h3>
+      <p>Located within DAV School, Talwandi. Professional cricket ground, practice nets, equipment provided.</p>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">💪</span>
+      <h3>Holistic Training</h3>
+      <p>Cricket technique + fitness + mental conditioning + game awareness. Complete player development.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ACHIEVEMENTS ═══ -->
+<div class="sep" style="margin:clamp(60px,12vw,120px) 0;"></div>
+<div class="wrap">
+  <div class="eyebrow" id="achievements">Achievements</div>
+  <div class="sec-title">TOURNAMENT <span class="t-gold">SUCCESS</span></div>
+
+  <div class="card-grid">
+    <div class="card reveal">
+      <span class="card-icon">🏆</span>
+      <h3>Shraddha Datta Tournament 2024</h3>
+      <p>Strong performance in U-14 category. Competitive excellence on the national tournament stage.</p>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">⭐</span>
+      <h3>Top Team in Region</h3>
+      <p>One of the best cricket teams in Kota and Rajasthan. Consistent winner across tournaments.</p>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">📈</span>
+      <h3>Player Development</h3>
+      <p>Multiple students advancing to higher competitive levels. Strong track record of nurturing talent.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ GALLERY ═══ -->
+<div class="sep" style="margin:clamp(60px,12vw,120px) 0;"></div>
+<div class="wrap">
+  <div class="eyebrow">Gallery</div>
+  <div class="sec-title">IN <span class="t-gold">ACTION</span></div>
+  <div class="gal-outer reveal">
+    <div class="gal-track">
+      <div class="gi" onclick="openLB('Ac2.jpg')"><img src="Ac2.jpg" alt="Coach Session" loading="lazy"></div>
+      <div class="gi" onclick="openLB('Ac3.jpg')"><img src="Ac3.jpg" alt="Training Ground" loading="lazy"></div>
+      <div class="gi" onclick="openLB('Ac4.jpg')"><img src="Ac4.jpg" alt="Team Photo" loading="lazy"></div>
+      <div class="gi" onclick="openLB('Ac5.jpg')"><img src="Ac5.jpg" alt="Tournament Match" loading="lazy"></div>
+      <div class="gi" onclick="openLB('Ac6.jpg')"><img src="Ac6.jpg" alt="Batting Practice" loading="lazy"></div>
+      <div class="gi" onclick="openLB('Ac7.jpg')"><img src="Ac7.jpg" alt="Academy Facility" loading="lazy"></div>
+      <div class="gi" onclick="openLB('Ac8.jpg')"><img src="Ac8.jpg" alt="Group Training" loading="lazy"></div>
+      <div class="gi" onclick="openLB('Ac9.jpg')"><img src="Ac9.jpg" alt="Victory Moment" loading="lazy"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<div class="sep" style="margin:clamp(60px,12vw,120px) 0;"></div>
+<div class="wrap">
+  <div class="eyebrow">Student Reviews</div>
+  <div class="sec-title">WHAT THEY <span class="t-gold">SAY</span></div>
+  <div class="testi-grid">
+    <div class="tc reveal">
+      <div class="tc-stars">★★★★★</div>
+      <div class="tc-text">"Coaching quality is excellent. Coach Mahaveer provides personalized attention. My game has improved dramatically in just 6 months."</div>
+      <div class="tc-author">
+        <div class="tc-av">AK</div>
+        <div>
+          <span class="tc-name">Aditya Kumar</span>
+          <span class="tc-role">Student, Age 16</span>
+        </div>
+      </div>
+    </div>
+    <div class="tc reveal">
+      <div class="tc-stars">★★★★★</div>
+      <div class="tc-text">"DAV Academy has discipline and professional coaching. Definitely one of the best in Kota. Highly recommend to all serious cricketers."</div>
+      <div class="tc-author">
+        <div class="tc-av">PS</div>
+        <div>
+          <span class="tc-name">Priya Sharma</span>
+          <span class="tc-role">Parent of Student</span>
+        </div>
+      </div>
+    </div>
+    <div class="tc reveal">
+      <div class="tc-stars">★★★★★</div>
+      <div class="tc-text">"The training environment is very motivating. We learned tournament strategy and mental toughness alongside technical skills. Best investment in cricket."</div>
+      <div class="tc-author">
+        <div class="tc-av">RP</div>
+        <div>
+          <span class="tc-name">Rohan Patel</span>
+          <span class="tc-role">Student, Age 14</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CTA BAND ═══ -->
+<div class="cta-band">
+  <div class="cta-inner">
+    <div class="reveal">
+      <div class="cta-scarcity">Limited Seats Available</div>
+      <div class="cta-title">START YOUR<br>CRICKET<br><span style="color:var(--gold);">JOURNEY</span></div>
+    </div>
+    <div class="cta-right reveal">
+      <div class="cta-divider"></div>
+      <div class="cta-phone">📞 +91 9672696091</div>
+      <div class="cta-divider"></div>
+      <p class="cta-desc">Train under NIS-certified coaching at DAV Academy. Professional cricket training for U-14, U-16, U-19. Evening batches available.</p>
+      <div class="cta-divider"></div>
+      <div class="cta-btns">
+        <a href="https://wa.me/919672696091?text=Hi%20I%20want%20to%20join%20DAV%20Cricket%20Academy" class="btn-raw"><span>🚀 Enroll Today</span></a>
+        <a href="#contact" class="btn-text">Get Info →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CONTACT ═══ -->
+<div class="sep"></div>
+<div class="wrap">
+  <div class="eyebrow" id="contact">Find Us</div>
+  <div class="sec-title">GET IN <span class="t-gold">TOUCH</span></div>
+  <div class="contact-grid">
+    <div class="cc-list reveal">
+      <div class="cc">
+        <div class="cc-icon-box">📍</div>
+        <div>
+          <span class="cc-lbl">Location</span>
+          <span class="cc-val">Talwandi, Kota, Rajasthan</span>
+          <span class="cc-val" style="font-size: 12px; font-weight: 400;">Within DAV School Premises</span>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="cc-icon-box">📞</div>
+        <div>
+          <span class="cc-lbl">Phone</span>
+          <span class="cc-val">+91 9672696091</span>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="cc-icon-box">⏰</div>
+        <div>
+          <span class="cc-lbl">Training Hours</span>
+          <span class="cc-val">4:30 PM – 6:30 PM</span>
+          <span class="cc-val" style="font-size: 12px; font-weight: 400;">Mon–Sun (Wed Off)</span>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="cc-icon-box">👥</div>
+        <div>
+          <span class="cc-lbl">Coach</span>
+          <span class="cc-val">Mahaveer Singh (NIS-Certified)</span>
+        </div>
+      </div>
+      <a href="https://wa.me/919672696091?text=Hi%20I%20want%20to%20know%20more%20about%20DAV%20Cricket%20Academy" class="btn-raw" style="margin-top:16px;"><span>💬 Chat on WhatsApp</span></a>
+    </div>
+    <div class="map-wrap reveal">
+      <iframe src="https://www.google.com/maps?q=Talwandi+Kota+Rajasthan&output=embed" title="DAV Cricket Academy Location" loading="lazy"></iframe>
+      <a href="https://maps.google.com/?q=Talwandi+Kota+Rajasthan" class="map-btn" target="_blank">📍 Get Directions</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo"><img src="logo.png" alt="DAV Cricket Academy" style="width:100%;height:100%;object-fit:contain;"></div>
+      <div>
+        <div class="footer-name">DAV CRICKET ACADEMY</div>
+        <p style="margin-top:4px;">© 2026 <strong>DAV Cricket Academy</strong><br>Talwandi, Kota, Rajasthan</p>
+      </div>
+    </div>
+    <p style="font-size:0.68rem;color:rgba(255,255,255,0.4);text-align:right;">Excellence in Cricket | Discipline in Training</p>
+  </div>
+  <div class="footer-year">Discipline • Focus • Excellence</div>
+</footer>
+
+<!-- ═══ FLOATING BUTTONS ═══ -->
+<div class="float-cluster">
+  <a href="https://wa.me/919672696091?text=Hi%20I%20want%20to%20join%20DAV%20Cricket%20Academy" class="fb" target="_blank" title="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" stroke-width="1.8" fill="none"/></svg>
+  </a>
+  <a href="tel:+919672696091" class="fb" target="_blank" title="Call Now">
+    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke-width="1.5" fill="none"/></svg>
+  </a>
+</div>
+
+<!-- ═══ LIGHTBOX ═══ -->
+<div id="lb">
+  <img id="lb-img" src="" alt="">
+  <button id="lb-close" onclick="closeLB()">✕</button>
+</div>
+
+<script>
+/* SCROLL REVEAL */
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { 
+    if(e.isIntersecting){ 
+      e.target.classList.add('visible'); 
+      ro.unobserve(e.target); 
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+/* COUNT-UP */
+function countUp(el) {
+  const target = parseInt(el.dataset.count), suffix = el.dataset.suffix || '';
+  let cur = 0; 
+  const step = Math.ceil(target / 50);
+  const t = setInterval(() => { 
+    cur = Math.min(cur + step, target); 
+    el.textContent = cur + suffix; 
+    if(cur >= target) clearInterval(t); 
+  }, 24);
+}
+const co = new IntersectionObserver(entries => {
+  entries.forEach(e => { 
+    if(e.isIntersecting){ 
+      countUp(e.target); 
+      co.unobserve(e.target); 
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-count]').forEach(el => co.observe(el));
+
+/* LIGHTBOX */
+function openLB(src) {
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lb').classList.add('open');
+}
+
+function closeLB() {
+  document.getElementById('lb').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape') closeLB();
+});
+</script>
+</body>
+</html>
